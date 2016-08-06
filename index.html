@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Git Time Metric by git-time-metric</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Git Time Metric</h1>
+      <h2 class="project-tagline">Simple, seamless, lightweight time tracking for Git</h2>
+      <a href="https://github.com/git-time-metric/gtm-site" class="btn">View on GitHub</a>
+      <a href="https://github.com/git-time-metric/gtm-site/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/git-time-metric/gtm-site/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p><img src="https://cloud.githubusercontent.com/assets/630550/17458477/32ff5ea4-5bd7-11e6-92d0-3e216c5b304d.png" width="219" height="92"><b></b></p>
+
+<h3>
+<a id="simple" class="anchor" href="#simple" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Simple</strong>
+</h3>
+
+<p>Install the GTM executable and a plugin for your favorite editor. To enable time tracking for a Git project simply run <code>gtm init</code> within the project's root directory.</p>
+
+<h3>
+<a id="seamless" class="anchor" href="#seamless" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Seamless</strong>
+</h3>
+
+<p>No need to remember to stop and start timers.  GTM knowns when you are working and does it for you.</p>
+
+<h3>
+<a id="lightweight" class="anchor" href="#lightweight" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Lightweight</strong>
+</h3>
+
+<p>You will not experience any lag or overhead.  The GTM process only runs intermittently to capture the time spent.</p>
+
+<h2>
+<a id="gain-insights-in-where-time-is-invested" class="anchor" href="#gain-insights-in-where-time-is-invested" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Gain insights in where time is invested</h2>
+
+<p><strong>Git commits with time spent</strong></p>
+
+<pre><code>&gt; gtm report -n 3
+
+9361c18 Rename packages
+Sun Jun 19 09:56:40
+
+341bd77 Vagrant file for testing on Linux
+Sun Jun 19 09:43:47 2016 -0500 Michael Schenk  1h 16m  0s
+
+792ba19 Require a 40 char SHA commit hash
+Thu Jun 16 22:28:45 2016 -0500 Michael Schenk  1h  1m  0s
+</code></pre>
+
+<p><strong>Git commits with detailed time spent by file</strong></p>
+
+<pre><code>&gt; gtm report -format files
+
+b2d16c8 Refactor discovering of paths when recording events
+Thu Jun 16 11:08:47 2016 -0500 Michael Schenk
+
+       30m 18s  [m] event/event.go
+       12m 31s  [m] event/manager.go
+        3m 14s  [m] project/project.go
+        1m 12s  [r] .git/COMMIT_EDITMSG
+        1m  0s  [r] .git/index
+           25s  [r] event/manager_test.go
+           20s  [r] metric/manager.go
+       49m  0s
+</code></pre>
+
+<p><strong>Timeline of time spent by day</strong></p>
+
+<pre><code>&gt; gtm report -format timeline
+
+           0123456789012345678901234
+Fri Jun 24 *                              22m  0s
+Sat Jun 25 **                          1h 28m  0s
+Sun Jun 26 ****                        3h 28m  0s
+Mon Jun 27 *                               4m  0s
+Tue Jun 28 **                          1h 36m  0s
+                                       6h 58m  0s
+</code></pre>
+
+<h2>
+<a id="available-editor-plugins" class="anchor" href="#available-editor-plugins" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Available Editor Plugins</h2>
+
+<p><strong><em>Stay tuned, more are on the way</em></strong></p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/630550/17458557/72247454-5bda-11e6-84ce-03364b8ac832.png" width="64" height="64">
+<img src="https://cloud.githubusercontent.com/assets/630550/17458560/72397408-5bda-11e6-909c-c2dd2dad3b52.png" width="64" height="64">
+<img src="https://cloud.githubusercontent.com/assets/630550/17458562/7264e2be-5bda-11e6-8311-bbed672ffb8f.png" width="64" height="64">
+<img src="https://cloud.githubusercontent.com/assets/630550/17458559/72302916-5bda-11e6-886e-2a41f423b06f.png" width="64" height="64">
+<img src="https://cloud.githubusercontent.com/assets/630550/17458563/7264f06a-5bda-11e6-9fb6-d0469730c1cb.png" width="64" height="64">
+<img src="https://cloud.githubusercontent.com/assets/630550/17458556/72030a62-5bda-11e6-89e4-6a3921034aed.png" width="64" height="64">
+<img src="https://cloud.githubusercontent.com/assets/630550/17458564/727d43a4-5bda-11e6-8b3c-56d3fb7bf988.png" width="64" height="64">
+<img src="https://cloud.githubusercontent.com/assets/630550/17458555/71e4352e-5bda-11e6-89d3-e8ff2c3a86e2.png" width="64" height="64">
+<img src="https://cloud.githubusercontent.com/assets/630550/17458561/72417ac2-5bda-11e6-9769-04cffc64397e.png" width="64" height="64">
+<img src="https://cloud.githubusercontent.com/assets/630550/17458591/82e06c98-5bdb-11e6-8ae0-c5b2bd2fe97f.png" width="64" height="64">
+<img src="https://cloud.githubusercontent.com/assets/630550/17458558/72269342-5bda-11e6-8194-d9bf030bd037.png" width="64" height="64"></p>
+
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<p>Consult the <a href="https://github.com/git-time-metric/gtm/blob/master/README.md">README</a> and <a href="https://github.com/git-time-metric/gtm/wiki">Wiki</a> for more information. </p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/git-time-metric/gtm-site">Git Time Metric</a> is maintained by <a href="https://github.com/git-time-metric">git-time-metric</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>

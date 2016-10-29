@@ -13,9 +13,11 @@
     
     <section class="main-content">
         <center><p><img src="https://cloud.githubusercontent.com/assets/630550/17458477/32ff5ea4-5bd7-11e6-92d0-3e216c5b304d.png" width="219" height="92"><b></b></p></center>
-        <h1><center>Git Time Metric</center></h1>
+				<h1><center><b>Git Time Metric</b></center></h1>
+				<hr>
         <center><iframe src="https://ghbtns.com/github-btn.html?user=git-time-metric&repo=gtm&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe></center>
-
+				<br>
+				<center>If you need to track your time and understand how you are spending it.  GTM makes this easy.</center>
 <h3>
 <a id="simple" class="anchor" href="#simple" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Simple</strong>
 </h3>
@@ -34,15 +36,46 @@
 
 <p>GTM lets you work at full throttle. You will not experience any lag or interruptions.  The GTM process only runs intermittently to capture the time spent.</p>
 
-<h2>
-<a id="gain-insights-in-where-time-is-invested" class="anchor" href="#gain-insights-in-where-time-is-invested" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Gain insights in where time is invested</h2>
+<h3>
+	<a id="gain-insights-in-where-time-is-invested" class="anchor" href="#gain-insights-in-where-time-is-invested" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><b>Gain insights on where you invest time</b></h3>
 
-<p>GTM provides more than just time spent.  It truly gives you insights into how you spend time.</p>
+<pre>$ gtm report -today -author Schenk
 
-<img src="https://cloud.githubusercontent.com/assets/630550/19832562/41947ae2-9dec-11e6-932b-c2bca710da40.png">
+7129f00 <b>Remove post processing of status</b>
+Fri Sep 09 20:45:03 2016 -0500 <b>gtm-vim-plugin</b> Michael Schenk
 
-<img src="https://cloud.githubusercontent.com/assets/630550/19832563/430e3caa-9dec-11e6-9bdf-51d52e95d947.png">
+       20m 40s  53% [m] plugin/gtm.vim
+       18m  5s  46% [r] Terminal
+           15s   1% [m] .gitignore
+       39m  0s          <b>gtm-vim-plugin</b> </pre>
 
+<pre>$ gtm report -format timeline-hours -last-week -author Schenk
+
+             <b>00.01.02.03.04.05.06.07.08.09.10.11.12.01.02.03.04.05.06.07.08.09.10.11.</b>
+             ------------------------------------------------------------------------
+<b>Sat Oct 08</b> |                                                          ▃▃▃             |
+             ------------------------------------------------------------------------
+<b>Sun Oct 09</b> |                      ▁▁▁   █████████▃▃▃██████▂▂▂   ▂▂▂                   |
+             ------------------------------------------------------------------------
+<b>Tue Oct 11</b> |                                                       ▂▂▂         ▂▂▂    |
+             ------------------------------------------------------------------------
+<b>Fri Oct 14</b> |                                     ▂▂▂                                  |
+             ------------------------------------------------------------------------
+<b>Sat Oct 15</b> |                            ███▇▇▇███▇▇▇███▁▁▁▇▇▇▂▂▂▁▁▁▃▃▃▆▆▆███▇▇▇       |
+             ------------------------------------------------------------------------</pre>
+
+<pre>$ gtm report -yesterday -format files
+
+    2h 29m 40s  33%  README.md
+    1h 45m 54s  24%  report/report.go
+    1h 35m  0s  21%  Terminal
+    1h  2m 54s  14%  report/query.go
+       13m 55s   3%  report/timeline.go
+       12m 45s   3%  report/templates.go
+        5m  0s   1%  command/report.go
+        1m 12s   0%  main.go
+           40s   0%  note/note.go
+    7h 27m  0s</pre>
 <h2>
 <a id="available-editor-plugins" class="anchor" href="#available-editor-plugins" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Available Editor Plugins</h2>
 
